@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 
 @RestController
-public class IndexController {
+public class PingController {
 
     @GetMapping("/api/ping")
     public Map<String,String> ping(){
