@@ -53,7 +53,7 @@ public class User {
     }
 
     public String getPassword() {
-        return password;
+        return passwordHashed;
     }
 
     public String getProfilePicturePath() {
@@ -73,7 +73,7 @@ public class User {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.passwordHashed = password;
     }
 
     public void setProfilePicturePath(String profilePicturePath) {

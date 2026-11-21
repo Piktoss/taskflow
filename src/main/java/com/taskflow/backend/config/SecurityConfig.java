@@ -22,7 +22,9 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http)
             throws Exception {
         // Configure HTTP authorization rules
-        http.authorizeHttpRequests(auth -> auth
+        http
+                .csrf(csrf -> csrf.disable())
+                .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/ping","/api/auth/**").permitAll()
                         .anyRequest().authenticated()
         );
