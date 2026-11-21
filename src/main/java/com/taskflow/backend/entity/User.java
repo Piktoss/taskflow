@@ -28,6 +28,11 @@ public class User {
     @Column(name = "created_at",nullable = false, insertable = false, updatable = false)
     private Instant createdAt;
 
+
+    protected User() {
+        // Required by JPA
+    }
+
     public Long getId() {
         return id;
     }
