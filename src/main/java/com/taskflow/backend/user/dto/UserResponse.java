@@ -1,4 +1,4 @@
-package com.taskflow.backend.dto.user;
+package com.taskflow.backend.user.dto;
 
 import java.time.Instant;
 

@@ -23,8 +23,7 @@ public class SecurityConfig {
             throws Exception {
         // Configure HTTP authorization rules
         http.authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/ping").permitAll()
-                        .requestMatchers("/api/users/{id}").authenticated()
+                        .requestMatchers("/api/ping","/api/auth/**").permitAll()
                         .anyRequest().authenticated()
         );
         return http.build();

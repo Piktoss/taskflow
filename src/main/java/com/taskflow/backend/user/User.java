@@ -1,4 +1,4 @@
-package com.taskflow.backend.entity;
+package com.taskflow.backend.user;
 
 
 import jakarta.persistence.*;
@@ -20,7 +20,7 @@ public class User {
     private String email;
 
     @Column(name = "password_hash", nullable = false)
-    private String password;
+    private String passwordHashed;
 
     @Column(name = "profile_picture_path",length = 255)
     private String profilePicturePath;
@@ -31,6 +31,13 @@ public class User {
 
     protected User() {
         // Required by JPA
+    }
+
+    public User(String username, String email, String passwordHashed, String profilePicturePath) {
+        this.username = username;
+        this.email = email;
+        this.passwordHashed = passwordHashed;
+        this.profilePicturePath = profilePicturePath;
     }
 
     public Long getId() {
